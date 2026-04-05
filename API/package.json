@@ -1,0 +1,31 @@
+{
+  "name": "book-library-api",
+  "version": "1.0.0",
+  "description": "CET252 Book Library API with CRUD, validation, search, APIDOC, and TestCafe tests",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "testcafe chrome tests/api-tests.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "api",
+    "sqlite",
+    "testcafe",
+    "apidoc",
+    "cet252"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "apidoc": "^1.2.0",
+    "testcafe": "^3.7.4"
+  }
+}
