@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">Premium Book Dashboard</p>
+            <h1>Book Library System</h1>
+            <p class="hero-subtitle">A modern animated CRUD client connected to a local Node + Express + SQLite API.</p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="glass-panel form-panel reveal">
+            <div class="section-header">
+                <h2 id="formTitle">Add New Book</h2>
+                <span class="small-badge">CRUD Form</span>
+            </div>
+
+            <form id="bookForm">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" placeholder="Enter book title" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" placeholder="Enter author name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="year">Year</label>
+                        <input type="number" id="year" placeholder="e.g. 2020" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" placeholder="e.g. Business" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="rating">Rating</label>
+                        <input type="number" step="0.1" id="rating" placeholder="0 to 5" required>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="image">Book Cover Image URL</label>
+                        <input type="text" id="image" placeholder="Paste image URL here" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Add Book</button>
+                    <button type="button" class="btn btn-secondary hidden" id="cancelEditBtn">Cancel Edit</button>
+                </div>
+            </form>
+
+            <p id="message" class="message-box"></p>
+        </section>
+
+        <section class="glass-panel tools-panel reveal">
+            <div class="tools-row">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by title, author or genre...">
+                </div>
+                <div class="tools-buttons">
+                    <button class="btn btn-secondary" id="searchBtn">Search</button>
+                    <button class="btn btn-secondary" id="refreshBtn">Refresh</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel list-panel reveal">
+            <div class="section-header">
+                <h2>Library Collection</h2>
+                <span class="small-badge" id="bookCount">0 Books</span>
+            </div>
+
+            <div id="loadingState" class="loading-state">
+                <div class="loader"></div>
+                <p>Loading books...</p>
+            </div>
+
+            <div id="booksContainer" class="book-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
